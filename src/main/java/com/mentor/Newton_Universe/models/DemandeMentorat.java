@@ -12,4 +12,11 @@ public class DemandeMentorat {
     private String status;
     private LocalDate date;
     
+    @ManyToOne
+    @JoinColumn(name = "mentorId" , nullable = false)
+    private Mentor mentor;
+
+    @ManyToOne
+    @JoinColumn(name = "etudiantId" , nullable= false)
+    private Etudiant etudiant;
 }

@@ -17,6 +17,9 @@ public class Quiz {
     private LocalDate date;
     private LocalDate dateLimite;
 
+    @ManyToOne
+    @JoinColumn(name = "MentorId" , nullable = false)
+    private Mentor mentor;
 
 
 }

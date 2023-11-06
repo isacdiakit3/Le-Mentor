@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.mentor.Newton_Universe.models.Etudiant;
 
 @Repository
-public interface EtudiantRepsitory extends JpaRepository<Etudiant, Long> {
+public interface EtudiantRepository extends JpaRepository<Etudiant, Long> {
+    Etudiant findByEmail(String email);
     
 }
