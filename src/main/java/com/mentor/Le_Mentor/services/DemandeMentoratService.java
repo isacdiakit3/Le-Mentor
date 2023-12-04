@@ -17,6 +17,7 @@ public class DemandeMentoratService {
 
 
     public DemandeMentorat creer(DemandeMentorat demandeMentorat){
+        demandeMentorat.setStatus("attente");
         return demandeMentoratRepository.save(demandeMentorat);
 
     }

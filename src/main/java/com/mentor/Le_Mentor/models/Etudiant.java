@@ -19,26 +19,27 @@ public class Etudiant {
     private String ville;
     private String email;
     private String password;
-    private String photo;
+    private String photo ;
 
-    @OneToMany(mappedBy = "etudiant" , cascade = CascadeType.ALL , orphanRemoval = true)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private List<DemandeMentorat> demandeMentorats = new ArrayList<>();
 
-    @OneToMany(mappedBy = "etudiant" , cascade = CascadeType.ALL , orphanRemoval = true)
-    private List<AssociationClasseEtudiant> associationClasseEtudiants = new ArrayList<>();
+    // @OneToMany(mappedBy = "etudiant" , cascade = CascadeType.ALL , orphanRemoval = true)
+    // @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    // private List<DemandeMentorat> demandeMentorats = new ArrayList<>();
 
-    @OneToMany(mappedBy = "etudiant" , cascade = CascadeType.ALL , orphanRemoval = true)
-    private List<Message> messages = new ArrayList<>();
+    // @OneToMany(mappedBy = "etudiant" , cascade = CascadeType.ALL , orphanRemoval = true)
+    // private List<AssociationClasseEtudiant> associationClasseEtudiants = new ArrayList<>();
 
-    @OneToMany(mappedBy = "etudiant" , cascade = CascadeType.ALL , orphanRemoval = true)
-    private List<Notification> notifications = new ArrayList<>();
+    // @OneToMany(mappedBy = "etudiant" , cascade = CascadeType.ALL , orphanRemoval = true)
+    // private List<Message> messages = new ArrayList<>();
 
-    @OneToMany(mappedBy = "etudiant" , cascade = CascadeType.ALL , orphanRemoval = true)
-    private List<RenduDevoir> renduDevoirs = new ArrayList<>();
+    // @OneToMany(mappedBy = "etudiant" , cascade = CascadeType.ALL , orphanRemoval = true)
+    // private List<Notification> notifications = new ArrayList<>();
 
-    @OneToMany(mappedBy = "etudiant" , cascade = CascadeType.ALL , orphanRemoval = true)
-    private List<RenduQuiz> renduQuizs = new ArrayList<>();
+    // @OneToMany(mappedBy = "etudiant" , cascade = CascadeType.ALL , orphanRemoval = true)
+    // private List<RenduDevoir> renduDevoirs = new ArrayList<>();
+
+    // @OneToMany(mappedBy = "etudiant" , cascade = CascadeType.ALL , orphanRemoval = true)
+    // private List<RenduQuiz> renduQuizs = new ArrayList<>();
 
 
 }

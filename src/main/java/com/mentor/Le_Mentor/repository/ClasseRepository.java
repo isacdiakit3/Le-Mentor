@@ -3,6 +3,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.mentor.Le_Mentor.models.Classe;
+import com.mentor.Le_Mentor.models.Mentor;
 
 import java.util.*;
 

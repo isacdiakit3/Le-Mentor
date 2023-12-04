@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mentor.Le_Mentor.models.DemandeMentorat;
 import com.mentor.Le_Mentor.services.DemandeMentoratService;
+import com.mentor.Le_Mentor.services.EtudiantService;
+import com.mentor.Le_Mentor.services.MentorService;
+
+import jakarta.validation.Valid;
 
 /**
  * DemandeMentoratController
@@ -24,9 +28,17 @@ public class DemandeMentoratController {
     
     @Autowired
     private DemandeMentoratService demandeMentoratService;
+    @Autowired
+    private MentorService mentorService;
+    @Autowired
+    private EtudiantService etudiantService;
 
-    @PostMapping("/creer")
-    public DemandeMentorat creer(@RequestBody DemandeMentorat demandeMentorat){
+    @PostMapping("/creer/{mentorId}/{etudiantId}")
+    public DemandeMentorat creerDemande(@Valid @RequestBody DemandeMentorat demandeMentorat, @PathVariable Long mentorId,@PathVariable Long etudiantId){
+        demandeMentorat.setMentor(mentorService.rechercher(mentorId));
+        demandeMentorat.setEtudiant(etudiantService.rechercher(etudiantId));
+        System.out.println(demandeMentorat.getMentor().getNom()+" "+demandeMentorat.getMentor().getPrenom());
+        System.out.println(demandeMentorat);
         return demandeMentoratService.creer(demandeMentorat);
     }
 

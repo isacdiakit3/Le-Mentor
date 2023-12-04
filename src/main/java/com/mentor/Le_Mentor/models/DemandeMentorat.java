@@ -1,19 +1,23 @@
 package com.mentor.Le_Mentor.models;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
+
 
 @Entity
 @Data
+
 public class DemandeMentorat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String status = "attente";
-    private LocalDate date = LocalDate.now();
+    private LocalDateTime date = LocalDateTime.now();
     
     @ManyToOne
+    @ToString.Exclude
     @JoinColumn(name = "mentorId" , nullable = false)
     private Mentor mentor;
 

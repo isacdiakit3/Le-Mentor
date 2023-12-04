@@ -16,15 +16,15 @@ public class Notification {
     private boolean etat;
 
     @ManyToOne
-    @JoinColumn(name = "mentorId" , nullable = false)
+    @JoinColumn(name = "mentorId" , nullable = true)
     private Mentor mentor;
 
     @ManyToOne
-    @JoinColumn(name = "etudiantId" , nullable = false)
+    @JoinColumn(name = "etudiantId" , nullable = true)
     private Etudiant etudiant;
 
     @ManyToOne
-    @JoinColumn(name = "adminId" , nullable = false)
+    @JoinColumn(name = "adminId" , nullable = true)
     private Admin admin;
 
 }

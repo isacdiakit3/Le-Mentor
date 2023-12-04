@@ -7,5 +7,5 @@ import com.mentor.Le_Mentor.models.Devoir;
 
 @Repository
 public interface DevoirRepository  extends JpaRepository<Devoir, Long>{
-    
+    Devoir findByTitre(String titre);
 }

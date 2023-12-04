@@ -27,27 +27,27 @@ public class Mentor {
     @Column(columnDefinition = "boolean default false")
     private boolean approuvee;
 
-    @OneToMany(mappedBy = "mentor" , cascade= CascadeType.ALL , orphanRemoval = true)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private List<DemandeMentorat> demandeMentorats = new ArrayList<>();
+    // @OneToMany(mappedBy = "mentor" , cascade= CascadeType.ALL , orphanRemoval = true)
+    // @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    // private List<DemandeMentorat> demandeMentorats = new ArrayList<>();
 
-    @OneToMany(mappedBy = "mentor" , cascade = CascadeType.ALL , orphanRemoval = true)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private List<Classe> classes = new ArrayList<>();
+    // @OneToMany(mappedBy = "mentor" , cascade = CascadeType.ALL , orphanRemoval = true)
+    // @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    // private List<Classe> classes = new ArrayList<>();
 
-    @OneToMany(mappedBy = "mentor" , cascade = CascadeType.ALL , orphanRemoval = true)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private List<Devoir> devoirs = new ArrayList<>();
+    // @OneToMany(mappedBy = "mentor" , cascade = CascadeType.ALL , orphanRemoval = true)
+    // @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    // private List<Devoir> devoirs = new ArrayList<>();
 
-    @OneToMany(mappedBy = "mentor" , cascade = CascadeType.ALL , orphanRemoval = true)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private List<Quiz> quizs = new ArrayList<>();
+    // @OneToMany(mappedBy = "mentor" , cascade = CascadeType.ALL , orphanRemoval = true)
+    // @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    // private List<Quiz> quizs = new ArrayList<>();
 
-    @OneToMany(mappedBy = "mentor" , cascade = CascadeType.ALL , orphanRemoval = true)
-    private List<Notification> notifications = new ArrayList<>();
+    // @OneToMany(mappedBy = "mentor" , cascade = CascadeType.ALL , orphanRemoval = true)
+    // private List<Notification> notifications = new ArrayList<>();
 
-    @OneToMany(mappedBy = "mentor" , cascade = CascadeType.ALL , orphanRemoval = true)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private List<Message> messages = new ArrayList<>();
+    // @OneToMany(mappedBy = "mentor" )
+    // @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    // private List<Message> messages = new ArrayList<>();
 
 }

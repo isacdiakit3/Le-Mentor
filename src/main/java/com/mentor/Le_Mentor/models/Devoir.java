@@ -24,7 +24,7 @@ public class Devoir {
     private String description;
     private String pieceJointe;
     private long point;
-    private LocalDate date = LocalDate.now();
+    private LocalDate date;
     @Column(nullable = true)
     private LocalDate dateLimite;
 
